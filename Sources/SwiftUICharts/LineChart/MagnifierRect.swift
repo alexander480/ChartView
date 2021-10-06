@@ -16,15 +16,15 @@ public struct MagnifierRect: View {
             Text("\(self.currentNumber, specifier: valueSpecifier)")
                 .font(.system(size: 18, weight: .bold))
                 .offset(x: 0, y:-110)
-                .foregroundColor(self.colorScheme == .dark ? Color.white : Color.black)
+				.foregroundColor(Color.clear)
             if (self.colorScheme == .dark ){
                 RoundedRectangle(cornerRadius: 16)
-                    .stroke(Color.white, lineWidth: self.colorScheme == .dark ? 2 : 0)
+                    .stroke(Color.clear, lineWidth: self.colorScheme == .dark ? 2 : 0)
                     .frame(width: 60, height: 260)
             }else{
                 RoundedRectangle(cornerRadius: 16)
                     .frame(width: 60, height: 280)
-                    .foregroundColor(Color.white)
+                    .foregroundColor(Color.clear)
                     .shadow(color: Colors.LegendText, radius: 12, x: 0, y: 6 )
                     .blendMode(.multiply)
             }
