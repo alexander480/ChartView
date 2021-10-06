@@ -16,7 +16,7 @@ public struct MagnifierRect: View {
             Text("\(self.currentNumber, specifier: valueSpecifier)")
                 .font(.system(size: 18, weight: .bold))
                 .offset(x: 0, y:-110)
-				.foregroundColor(Color.clear)
+				.foregroundColor(Color.primary)
             if (self.colorScheme == .dark ){
                 RoundedRectangle(cornerRadius: 16)
                     .stroke(Color.clear, lineWidth: self.colorScheme == .dark ? 2 : 0)
